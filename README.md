@@ -30,10 +30,12 @@ git clone <YOUR_GIT_URL>
 cd <YOUR_PROJECT_NAME>
 
 # Step 3: Install the necessary dependencies.
-npm i
+npm install
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
+
+The application will be available at http://localhost:3000
 ```
 
 **Edit a file directly in GitHub**
@@ -54,8 +56,8 @@ npm run dev
 
 This project is built with:
 
-- Vite
-- TypeScript
+- Next.js
+- JavaScript
 - React
 - shadcn-ui
 - Tailwind CSS
