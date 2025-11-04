@@ -2,8 +2,8 @@
   "/men/page": "app/men/page.js",
   "/products/[id]/page": "app/products/[id]/page.js",
   "/custom-fit/[id]/page": "app/custom-fit/[id]/page.js",
-  "/about/page": "app/about/page.js",
-  "/wishlist/page": "app/wishlist/page.js",
+  "/orders/page": "app/orders/page.js",
   "/women/page": "app/women/page.js",
-  "/page": "app/page.js"
+  "/about/page": "app/about/page.js",
+  "/kids/page": "app/kids/page.js"
 }

@@ -1,16 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ShoppingCart, Heart } from "lucide-react";
+import { ShoppingCart, Heart, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/context/CartContext";
 import { Badge } from "@/components/ui/badge";
 
 const Layout = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const { cartCount, wishlistCount } = useCart();
 
@@ -20,50 +17,49 @@ const Layout = ({ children }) => {
     { name: "Kids", path: "/kids" },
     { name: "About Us", path: "/about" },
     { name: "Orders", path: "/orders" },
-    { name: "Wishlist", path: "/wishlist" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          {/* Burger Menu - Left */}
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-80 bg-background">
-              <nav className="flex flex-col gap-6 mt-12">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    href={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-2xl font-light tracking-tight transition-all duration-300 hover:text-primary hover:translate-x-2 ${
-                      pathname === item.path
-                        ? "text-primary font-medium"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+        <div className="container mx-auto px-4 h-20 flex items-center justify-between relative">
+          {/* Menu Items - Left */}
+          <nav className="flex items-center gap-6">
+            {menuItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`text-sm font-medium tracking-tight transition-all duration-300 hover:text-primary ${
+                  pathname === item.path
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
 
           {/* Logo - Center */}
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-105">
             <h1 className="text-3xl font-bold tracking-tighter premium-text">
-            SHANK'S
+              SHANK'S
             </h1>
           </Link>
 
-          {/* Cart & Wishlist - Right */}
+          {/* Search, Profile, Wishlist & Cart - Right */}
           <div className="flex items-center gap-2">
+            <Link href="/search">
+              <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
+                <Search className="h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href="/profile">
+              <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
+                <User className="h-6 w-6" />
+              </Button>
+            </Link>
             <Link href="/wishlist">
               <Button variant="ghost" size="icon" className="relative hover:bg-accent transition-all duration-300 hover:scale-110">
                 <Heart className="h-6 w-6" />

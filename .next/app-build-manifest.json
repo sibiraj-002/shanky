@@ -11,11 +11,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/kids/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/kids/page.js"
-    ],
     "/men/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -36,20 +31,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/orders/page.js"
     ],
-    "/women/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/women/page.js"
-    ],
     "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about/page.js"
     ],
-    "/wishlist/page": [
+    "/kids/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/wishlist/page.js"
+      "static/chunks/app/kids/page.js"
+    ],
+    "/women/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/women/page.js"
     ]
   }
 }

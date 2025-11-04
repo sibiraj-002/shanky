@@ -7,25 +7,25 @@ const fabrics = [
     id: "cotton",
     name: "Premium Cotton",
     description: "Breathable and comfortable",
-    image: "/placeholder.svg",
+    image: "/premimum_cotton.jpg",
   },
   {
     id: "linen",
     name: "Linen Blend",
     description: "Elegant and lightweight",
-    image: "/placeholder.svg",
+    image: "/linen_blend.jpg",
   },
   {
     id: "wool",
     name: "Fine Wool",
     description: "Warm and sophisticated",
-    image: "/placeholder.svg",
+    image: "/fine_wool.jpg",
   },
   {
     id: "silk",
     name: "Pure Silk",
     description: "Luxurious and smooth",
-    image: "/placeholder.svg",
+    image: "/silk.jpg",
   },
 ];
 
