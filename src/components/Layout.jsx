@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
           </nav>
 
           {/* Logo - Center */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-105">
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-105 cursor-pointer">
             <h1 className="text-3xl font-bold tracking-tighter premium-text">
               SHANK'S
             </h1>
