@@ -754,9 +754,6 @@ video {
 .mt-1 {
   margin-top: 0.25rem;
 }
-.mt-12 {
-  margin-top: 3rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -838,9 +835,6 @@ video {
 .h-\[30vh\] {
   height: 30vh;
 }
-.h-\[40vh\] {
-  height: 40vh;
-}
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -906,9 +900,6 @@ video {
 }
 .w-8 {
   width: 2rem;
-}
-.w-80 {
-  width: 20rem;
 }
 .w-full {
   width: 100%;
@@ -1441,9 +1432,6 @@ video {
 .font-bold {
   font-weight: 700;
 }
-.font-light {
-  font-weight: 300;
-}
 .font-medium {
   font-weight: 500;
 }
@@ -1707,11 +1695,6 @@ All colors MUST be HSL.
 
 .placeholder\:text-muted-foreground::placeholder {
   color: hsl(var(--muted-foreground));
-}
-
-.hover\:translate-x-2:hover {
-  --tw-translate-x: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:rotate-12:hover {
