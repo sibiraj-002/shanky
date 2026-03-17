@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Package, Scissors, Truck } from "lucide-react";
+import { Package, Shirt, Truck } from "lucide-react";
 
 const ProcessSteps = () => {
     return (
@@ -12,24 +12,22 @@ const ProcessSteps = () => {
                         <Package className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 premium-text">
-                        1. Choose Fabric
+                        1. Choose Your Product
                     </h3>
                     <p className="text-muted-foreground">
-                        Browse our curated collection and select your preferred fabric.
-                        Each material is carefully chosen for quality and comfort.
+                        Pick a printed T-shirt, jersey or sports kit and select your size.
                     </p>
                 </Card>
 
                 <Card className="p-8 text-center hover-lift transition-all duration-500 hover:scale-105">
                     <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center transition-transform duration-500 hover:rotate-12">
-                        <Scissors className="w-8 h-8 text-primary-foreground" />
+                        <Shirt className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 premium-text">
-                        2. We Stitch in Chennai
+                        2. We Print & Prepare
                     </h3>
                     <p className="text-muted-foreground">
-                        Our team purchases your fabric and our master tailors craft
-                        your garment with 40+ years of expertise.
+                        Our team prints your design and prepares your tee, jersey or kit in Chennai.
                     </p>
                 </Card>
 
@@ -41,8 +39,7 @@ const ProcessSteps = () => {
                         3. Delivered to You
                     </h3>
                     <p className="text-muted-foreground">
-                        Your perfectly tailored garment is delivered to your doorstep,
-                        anywhere in India, ready to wear.
+                        Your customised gear is shipped anywhere in India, ready for match day.
                     </p>
                 </Card>
             </div>

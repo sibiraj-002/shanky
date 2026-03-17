@@ -21,77 +21,163 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-foreground focus:shadow"
+      >
+        Skip to content
+      </a>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between relative">
-          {/* Menu Items - Left */}
-          <nav className="flex items-center gap-6">
-            {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`text-sm font-medium tracking-tight transition-all duration-300 hover:text-primary ${
-                  pathname === item.path
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
+        <div className="container mx-auto px-4">
+          {/* Mobile Layout: Top Row - Logo Left, Action Buttons Right */}
+          <div className="md:hidden h-16 flex items-center justify-between">
+            {/* Logo - Left */}
+            <Link
+              href="/"
+              aria-label="Go to home page"
+              className="transition-all duration-300 hover:scale-105 cursor-pointer"
+            >
+              <span className="text-2xl font-bold tracking-tighter premium-text">
+                SHANK'S
+              </span>
+            </Link>
+
+            {/* Action Buttons - Right */}
+            <div className="flex items-center gap-1">
+              <Link href="/search" aria-label="Search">
+                <Button variant="ghost" size="icon" className="h-9 w-9 hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <Search className="h-5 w-5" />
+                </Button>
               </Link>
-            ))}
-          </nav>
+              <Link href="/profile" aria-label="Profile">
+                <Button variant="ghost" size="icon" className="h-9 w-9 hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <User className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/wishlist" aria-label="Wishlist">
+                <Button variant="ghost" size="icon" className="relative h-9 w-9 hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <Heart className="h-5 w-5" />
+                  {wishlistCount > 0 && (
+                    <Badge 
+                      className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px] animate-bounce"
+                      variant="destructive"
+                    >
+                      {wishlistCount}
+                    </Badge>
+                  )}
+                </Button>
+              </Link>
+              <Link href="/cart" aria-label="Cart">
+                <Button variant="ghost" size="icon" className="relative h-9 w-9 hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <ShoppingCart className="h-5 w-5" />
+                  {cartCount > 0 && (
+                    <Badge 
+                      className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px] animate-bounce"
+                      variant="destructive"
+                    >
+                      {cartCount}
+                    </Badge>
+                  )}
+                </Button>
+              </Link>
+            </div>
+          </div>
 
-          {/* Logo - Center */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-105 cursor-pointer">
-            <h1 className="text-3xl font-bold tracking-tighter premium-text">
-              SHANK'S
-            </h1>
-          </Link>
+          {/* Mobile Layout: Bottom Row - Menu Items Centered */}
+          <div className="md:hidden h-12 border-t border-border">
+            <nav className="flex items-center justify-center h-full gap-3 overflow-x-auto scrollbar-hide px-4">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`text-xs font-medium tracking-tight whitespace-nowrap transition-all duration-300 hover:text-primary ${
+                    pathname === item.path
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-          {/* Search, Profile, Wishlist & Cart - Right */}
-          <div className="flex items-center gap-2">
-            <Link href="/search">
-              <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
-                <Search className="h-6 w-6" />
-              </Button>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex h-20 items-center justify-between relative">
+            {/* Menu Items - Left */}
+            <nav className="flex items-center gap-6">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`text-sm font-medium tracking-tight transition-all duration-300 hover:text-primary ${
+                    pathname === item.path
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Logo - Center */}
+            <Link
+              href="/"
+              aria-label="Go to home page"
+              className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-105 cursor-pointer"
+            >
+              <span className="text-3xl font-bold tracking-tighter premium-text">
+                SHANK'S
+              </span>
             </Link>
-            <Link href="/profile">
-              <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
-                <User className="h-6 w-6" />
-              </Button>
-            </Link>
-            <Link href="/wishlist">
-              <Button variant="ghost" size="icon" className="relative hover:bg-accent transition-all duration-300 hover:scale-110">
-                <Heart className="h-6 w-6" />
-                {wishlistCount > 0 && (
-                  <Badge 
-                    className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs animate-bounce"
-                    variant="destructive"
-                  >
-                    {wishlistCount}
-                  </Badge>
-                )}
-              </Button>
-            </Link>
-            <Link href="/cart">
-              <Button variant="ghost" size="icon" className="relative hover:bg-accent transition-all duration-300 hover:scale-110">
-                <ShoppingCart className="h-6 w-6" />
-                {cartCount > 0 && (
-                  <Badge 
-                    className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs animate-bounce"
-                    variant="destructive"
-                  >
-                    {cartCount}
-                  </Badge>
-                )}
-              </Button>
-            </Link>
+
+            {/* Search, Profile, Wishlist & Cart - Right */}
+            <div className="flex items-center gap-2">
+              <Link href="/search" aria-label="Search">
+                <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <Search className="h-6 w-6" />
+                </Button>
+              </Link>
+              <Link href="/profile" aria-label="Profile">
+                <Button variant="ghost" size="icon" className="hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <User className="h-6 w-6" />
+                </Button>
+              </Link>
+              <Link href="/wishlist" aria-label="Wishlist">
+                <Button variant="ghost" size="icon" className="relative hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <Heart className="h-6 w-6" />
+                  {wishlistCount > 0 && (
+                    <Badge 
+                      className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs animate-bounce"
+                      variant="destructive"
+                    >
+                      {wishlistCount}
+                    </Badge>
+                  )}
+                </Button>
+              </Link>
+              <Link href="/cart" aria-label="Cart">
+                <Button variant="ghost" size="icon" className="relative hover:bg-accent transition-all duration-300 hover:scale-110">
+                  <ShoppingCart className="h-6 w-6" />
+                  {cartCount > 0 && (
+                    <Badge 
+                      className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs animate-bounce"
+                      variant="destructive"
+                    >
+                      {cartCount}
+                    </Badge>
+                  )}
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="pt-20">{children}</main>
+      <main id="main-content" className="pt-28 md:pt-20">{children}</main>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground mt-24">
@@ -122,7 +208,7 @@ const Layout = ({ children }) => {
               <h4 className="font-semibold mb-4">Contact</h4>
               <p className="text-sm text-primary-foreground/80">Chennai, India</p>
               <p className="text-sm text-primary-foreground/80 mt-2">
-                Expert tailoring delivered nationwide
+                Custom printed T-shirts, jerseys and sports kits delivered nationwide
               </p>
             </div>
           </div>

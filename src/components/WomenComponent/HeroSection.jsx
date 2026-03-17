@@ -5,10 +5,10 @@ const HeroSection = () => {
         <section className="relative h-[60vh] bg-gradient-to-b from-smoke to-background flex items-center justify-center">
             <div className="text-center">
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 premium-text">
-                    Women's Collection
+                    Women’s Tees & Jerseys
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-                    Elegance crafted to perfection
+                    Sporty and casual printed styles for every day
                 </p>
             </div>
         </section>

@@ -1,4 +1,18 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
-  "/icon.svg/route": "app/icon.svg/route.js"
+  "/cart/page": "app/cart/page.js",
+  "/kids/page": "app/kids/page.js",
+  "/custom-fit/[id]/page": "app/custom-fit/[id]/page.js",
+  "/men/page": "app/men/page.js",
+  "/orders/page": "app/orders/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/products/[id]/page": "app/products/[id]/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/search/page": "app/search/page.js",
+  "/wishlist/page": "app/wishlist/page.js",
+  "/women/page": "app/women/page.js"
 }

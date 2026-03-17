@@ -12,15 +12,15 @@ const ProcessSection = () => {
                         <ul className="space-y-4 text-muted-foreground">
                             <li className="flex items-start">
                                 <span className="font-bold text-primary mr-3">1.</span>
-                                <span>Choose your fabric from our curated collection</span>
+                                <span>Choose your product – printed T-shirt, jersey or sports kit</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="font-bold text-primary mr-3">2.</span>
-                                <span>We source and purchase your selected fabric in Chennai</span>
+                                <span>Upload your design or share details for names, numbers and logos</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="font-bold text-primary mr-3">3.</span>
-                                <span>Our master tailors craft your garment with precision</span>
+                                <span>We print and prepare your gear in Chennai</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="font-bold text-primary mr-3">4.</span>
@@ -36,11 +36,11 @@ const ProcessSection = () => {
                         <ul className="space-y-4 text-muted-foreground">
                             <li className="flex items-start">
                                 <span className="text-primary mr-3">✓</span>
-                                <span>40+ years of tailoring expertise</span>
+                                <span>Experience in fit and garment construction</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="text-primary mr-3">✓</span>
-                                <span>Premium fabrics sourced locally</span>
+                                <span>Prints and materials chosen for comfort and durability</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="text-primary mr-3">✓</span>

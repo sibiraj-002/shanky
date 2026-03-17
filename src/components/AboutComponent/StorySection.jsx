@@ -6,17 +6,16 @@ const StorySection = () => {
             <div className="max-w-4xl mx-auto">
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold mb-6 premium-text">
-                        Where Tailoring Meets Technology
+                        Custom Printed Gear for Every Game
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                        For over four decades, SHANK'S has been a trusted name in custom tailoring.
-                        What began as a small family workshop in Chennai has evolved into a modern
-                        tailoring service that bridges tradition and technology.
+                        SHANK&apos;S began as a neighbourhood tailoring shop in Chennai. Today, we&apos;ve evolved into a
+                        digital-first brand focused on custom printed T-shirts, jerseys and sports kits for fans and teams
+                        across India.
                     </p>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                        Our master tailors, trained through generations, bring unmatched expertise
-                        to every stitch. Today, we've made this heritage accessible to customers
-                        across India through our digital platform.
+                        From streetwear graphic tees to full match-day kits, we obsess over fit, print quality and comfort
+                        so you can focus on your game. Design online, and we&apos;ll handle the rest from our base in Chennai.
                     </p>
                 </div>
             </div>

@@ -10,7 +10,7 @@ const HeroSection = () => {
             <div className="absolute inset-0">
                 <Image
                     src="/hero-model.jpg"
-                    alt="Premium tailored clothing"
+                    alt="Custom printed T-shirts and sports jerseys"
                     fill
                     className="object-cover fabric-overlay"
                     priority

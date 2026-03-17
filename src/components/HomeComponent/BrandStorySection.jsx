@@ -12,7 +12,7 @@ const BrandStorySection = () => {
                     <div>
                         <Image
                             src="/fabric-texture.jpg"
-                            alt="Premium fabrics"
+                            alt="Printed T-shirts and sports jerseys"
                             width={600}
                             height={600}
                             className="rounded-lg shadow-2xl w-full"
@@ -20,20 +20,23 @@ const BrandStorySection = () => {
                     </div>
                     <div>
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 premium-text">
-                            Your Fabric.
+                            Your Team.
                             <br />
-                            Your Fit.
+                            Your Print.
                             <br />
-                            Your Style.
+                            Your Game.
                         </h2>
                         <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                            From Bengaluru to Chennai and beyond, we bring 40+ years of
-                            tailoring expertise directly to your doorstep. Choose your
-                            fabric online, and our master craftsmen will create a
-                            perfectly tailored garment just for you.
+                            SHANK&apos;S now focuses on printed T‑shirts, jerseys and sports
+                            essentials. From fan tees to full match kits, we help you
+                            create gear that looks sharp on and off the field.
                         </p>
                         <Link href="/about">
-                            <Button variant="secondary" size="lg" className="hover:scale-105 transition-transform duration-300">
+                            <Button
+                                variant="secondary"
+                                size="lg"
+                                className="hover:scale-105 transition-transform duration-300"
+                            >
                                 Learn Our Story
                             </Button>
                         </Link>
